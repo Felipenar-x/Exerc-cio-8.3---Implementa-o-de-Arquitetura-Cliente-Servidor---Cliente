@@ -1,60 +1,47 @@
+# 📚 Livraria Mackenzie — Front-End (Cliente)
 
-PROJETO: LIVRARIA MACKENZIE - ARQUITETURA CLEAN
-=
+Interface estática da Livraria Mackenzie. Consome os dados da API de forma assíncrona e renderiza os livros e banners dinamicamente na tela.
 
-1. ARQUITETURA DO PROJETO
-   
--------------------------
-O projeto segue os princípios da Clean Architecture, garantindo que a lógica de 
-negócio esteja separada da interface e do armazenamento de dados.
+---
 
-[Apresentação / View]
-- Local: src/presentation/templates
-- O que faz: Contém os ficheiros HTML e CSS (Tailwind) que o utilizador vê.
+## 🗂️ Estrutura de Arquivos
 
-[Controlador / Controller]
-- Local: src/presentation/controller.py
-- O que faz: Recebe os dados da rota e prepara-os para serem exibidos na View.
-
-[Aplicação / Service]
-- Local: src/app/service.py
-- O que faz: Contém as regras de negócio. Ex: calcular qual banner exibir 
-  com base no mês ou filtrar livros com as suas respetivas notas.
-
-[Persistência / Infrastructure]
-- Local: src/infrastructure/persist.py
-- O que faz: Lê e escreve nos ficheiros de texto (livros.txt, promocao.txt, avaliacao.txt).
-
-[Domínio / Entidades]
-- Local: src/domain/
-- O que faz: Define os modelos de dados e as interfaces (contratos) do sistema.
-
-
-2. FEATURE IMPLEMENTADA
-   
--------------------------
-- Múltiplas Avaliações: Suporte para exibir várias críticas e notas de diferentes 
-  leitores para o mesmo livro (leitura de ficheiro TXT com tratamento de vírgulas).
-
-
-3. COMO EXECUTAR O PROJETO
-   
--------------------------
-Passo 1: Criar o ambiente virtual
 ```
-    python -m venv venv
+/
+├── index.html    → Estrutura base da aplicação com Tailwind CSS
+├── script.js     → Lógica de consumo da API (fetch) e renderização dinâmica
+└── style.css     → Estilizações e animações customizadas
 ```
-Passo 2: Ativar o ambiente (Windows)
-```
-    .\venv\Scripts\activate
-```
-Passo 3: Instalar as dependências
-```
-    pip install flask
-```
-Passo 4: Rodar a aplicação
-```
-    python app.py
-```
-Acesse no navegador: http://127.0.0.1:5000
 
+---
+
+## ⚙️ Funcionamento
+
+O cliente utiliza JavaScript para buscar dados no endereço da API (`localhost:5000`).
+
+> ⚠️ É necessário que o servidor esteja rodando para que os dados apareçam na tela.
+
+---
+
+## 🚀 Como Executar
+
+```bash
+# Passo 1: Certifique-se de que o servidor (API) está ativo
+
+# Passo 2: Abra o arquivo index.html no navegador
+# Recomendado: use a extensão Live Server do VS Code para garantir
+# que o script.js e o style.css sejam carregados corretamente
+
+# Passo 3: A interface irá carregar automaticamente os livros
+# e banners vindos do servidor
+```
+
+---
+
+## 🛠️ Tecnologias
+
+| Tecnologia | Uso |
+|---|---|
+| HTML | Estrutura da página |
+| Tailwind CSS | Estilização |
+| JavaScript (Fetch API) | Consumo da API e renderização dinâmica |
