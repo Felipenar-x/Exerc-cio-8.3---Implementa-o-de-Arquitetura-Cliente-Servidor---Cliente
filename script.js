@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:5000/api/livros';
+const API_URL = 'https://cliente-servidor-bmbyg6bqf7ayajbc.canadacentral-01.azurewebsites.net/api/livros](https://cliente-servidor-bmbyg6bqf7ayajbc.canadacentral-01.azurewebsites.net/api/livros';
 const categorias = ["Suspense", "Romance", "Horror", "Ficção Científica", "Fantasia", "Tecnologia", "História", "Distopia", "Filosofia", "Finanças"];
 
 async function carregarPagina(categoria = '', busca = '') {
